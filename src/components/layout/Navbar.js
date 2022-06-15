@@ -12,8 +12,9 @@ export default function Navbar(){
             <ul className={style.list}>
                 <li className={style.item}> <Link to='/'>Home</Link></li>
                 <li className={style.item}> <Link to='/cadastro'>Cadastro</Link></li>
-                <li className={style.item}><Link to='/contatos'>Caontatos</Link></li>
-                <li className={style.item}><Link to='/about'>About</Link></li>
+                <li className={style.item}><Link to='/contatos'>Contatos</Link></li>
+                <li className={style.item}><Link to='/candidatos'>Candidatos</Link></li>
+                <li className={style.item}><Link to='/cadvagas'>Vagas</Link></li>
             </ul>
       </Container>
       </nav>

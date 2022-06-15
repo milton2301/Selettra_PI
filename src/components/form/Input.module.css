@@ -1,0 +1,70 @@
+  .form_control{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.label{ 
+    position:absolute;
+    left: 10px;
+    top: 14px;
+    transition: all 0.2s;
+    padding:0 2px;
+    z-index: 1;
+    color: #83190b;
+    user-select: none;
+}
+
+.input{
+    padding: 0.8rem;
+    width: 100%;
+    height: 100%;
+    border: solid 2px #2f2c45;
+    background: #fff;
+    border-radius: 5px;
+    font-size:18px;
+    outline: none;
+    transition: all 0.3s;
+    color: black;
+}
+
+.label::before{
+    content: '';
+    height:10px;
+    background:  #fff;
+    position: absolute;
+    left: 0;
+    top: 15px;
+    width: 100%;
+    z-index: -1;
+}
+
+.input:focus{
+    border: 2px solid #000000;
+}
+
+.input:focus + .label{
+    top: -15px;
+    color: black;
+    font-size: 18px;
+    text-shadow: 1.5px 1px 2px rgba(8,8,8,0.493);
+}
+
+.input::placeholder{
+    font-size: 16px;
+    opacity: 0;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+.input::placeholder{
+    opacity: 0;
+}
+
+.input:not(:placeholder-shown) + .label{
+    top: -15px;
+    color:black;
+    font-size: 14pt;
+} 

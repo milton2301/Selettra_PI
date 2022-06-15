@@ -1,0 +1,124 @@
+{
+  "candidatos": [
+    {
+      "sexo": {
+        "id": "1",
+        "name": "Masculino"
+      },
+      "name": "Amilton",
+      "cpf": "1222355222",
+      "rg": "25656558588",
+      "datanascimento": "1995-01-23",
+      "estadoCivil": {
+        "id": "1",
+        "name": "Solteiro"
+      },
+      "vagaCandidatada": {
+        "id": "1",
+        "name": "Técnico de TI"
+      },
+      "idade": "26",
+      "nacionalidade": "Brasileiro",
+      "telefone": "41 9 9582-7310",
+      "whatsapp": "41 9 9582-7310",
+      "email": "amiltongomes2301@gmail.com",
+      "cep": "83090-420",
+      "uf": "PR",
+      "municipio": "São José dos Pinhais",
+      "rua": "Antonio Downbroski",
+      "numero": "325",
+      "complemento": "Sobrado",
+      "id": 1
+    },
+    {
+      "name": "Amilton Gomes",
+      "cpf": "166666",
+      "rg": "225525225444",
+      "sexo": {
+        "id": "1",
+        "name": "Masculino"
+      },
+      "datanascimento": "1995-01-23",
+      "estadoCivil": {
+        "id": "1",
+        "name": "Solteiro"
+      },
+      "idade": "26",
+      "nacionalidade": "Brasil",
+      "vagaCandidatada": {
+        "id": "2",
+        "name": "Administrador"
+      },
+      "telefone": "454445454545",
+      "whatsapp": "4545454586",
+      "email": "amiltongomes2301@gmail.com",
+      "cep": "565656565",
+      "uf": "pr",
+      "municipio": "maoasmoajko",
+      "rua": "kaoksoaksko",
+      "numero": "121313",
+      "complemento": "casas",
+      "id": 2
+    }
+  ],
+  "estadocivil": [
+    {
+      "id": 1,
+      "name": "Solteiro"
+    },
+    {
+      "id": 2,
+      "name": "Casado"
+    },
+    {
+      "id": 3,
+      "name": "Divorciado"
+    }
+  ],
+  "sexo": [
+    {
+      "id": 1,
+      "name": "Masculino"
+    },
+    {
+      "id": 2,
+      "name": "Femenino"
+    }
+  ],
+  "vagas": [
+    {
+      "name": "Técnico de Informática",
+      "descricao": "Instalações, manutenção.",
+      "salario": "4.500",
+      "setor": "TI",
+      "qtd": "1",
+      "id": 1
+    },
+    {
+      "name": "Técnico de TI",
+      "descricao": "Instalações, manutenção.",
+      "setor": "TI",
+      "salario": "2000",
+      "qtd": "2",
+      "id": 2
+    }
+  ],
+  "testes": [
+    {
+      "id": "1",
+      "name": "Word"
+    },
+    {
+      "id": "2",
+      "name": "Excel"
+    },
+    {
+      "id": "3",
+      "name": "Programação"
+    },
+    {
+      "id": "4",
+      "name": "Lógica"
+    }
+  ]
+}
