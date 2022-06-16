@@ -29,36 +29,6 @@
       "numero": "325",
       "complemento": "Sobrado",
       "id": 1
-    },
-    {
-      "name": "Amilton Gomes",
-      "cpf": "166666",
-      "rg": "225525225444",
-      "sexo": {
-        "id": "1",
-        "name": "Masculino"
-      },
-      "datanascimento": "1995-01-23",
-      "estadoCivil": {
-        "id": "1",
-        "name": "Solteiro"
-      },
-      "idade": "26",
-      "nacionalidade": "Brasil",
-      "vagaCandidatada": {
-        "id": "2",
-        "name": "Administrador"
-      },
-      "telefone": "454445454545",
-      "whatsapp": "4545454586",
-      "email": "amiltongomes2301@gmail.com",
-      "cep": "565656565",
-      "uf": "pr",
-      "municipio": "maoasmoajko",
-      "rua": "kaoksoaksko",
-      "numero": "121313",
-      "complemento": "casas",
-      "id": 2
     }
   ],
   "estadocivil": [
@@ -95,12 +65,20 @@
       "id": 1
     },
     {
-      "name": "Técnico de TI",
-      "descricao": "Instalações, manutenção.",
-      "setor": "TI",
-      "salario": "2000",
+      "name": "Manutenção",
+      "descricao": "Manutenção de equipamentos",
+      "setor": "Manutenção",
+      "salario": "3.800",
       "qtd": "2",
       "id": 2
+    },
+    {
+      "name": "Auxiliar Contábil",
+      "descricao": "Contabilidade da empresa",
+      "setor": "Contábilidade",
+      "salario": "2.525",
+      "qtd": "3",
+      "id": 3
     }
   ],
   "testes": [

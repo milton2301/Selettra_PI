@@ -9,6 +9,7 @@ export default function CadastroFormVagas({handledSubmit, vagasData, btntext}){
     const [vaga, setVaga] = useState(vagasData || {})
     const [teste, setTeste] = useState([])
     
+
     const refreshPage = ()=>{
         window.location.reload();
      }
@@ -34,32 +35,6 @@ export default function CadastroFormVagas({handledSubmit, vagasData, btntext}){
         document.getElementById("setor").value = ""
         document.getElementById("salario").value = ""
         document.getElementById("qtd").value = ""
-    }
-
-    function habilitar(){
-       var div = document.getElementById("divform")
-       var divbtn = document.getElementById("divbtns")
-       var button = document.getElementById("btnnovo")
-
-       button.hidden = true
-       divbtn.hidden = false
-       div.hidden = false
-    }
-
-    function desabilitar(){
-        var div = document.getElementById("divform")
-        var divbtn = document.getElementById("divbtns")
-        var button = document.getElementById("btnnovo")
-
-        button.hidden = false
-        divbtn.hidden = true
-        div.hidden = true
-
-        var elemento = document.getElementById("list-group");
-        while (elemento.firstChild) {
-        elemento.removeChild(elemento.firstChild);
-        }
-
     }
 
     useEffect(() => {
@@ -126,13 +101,8 @@ export default function CadastroFormVagas({handledSubmit, vagasData, btntext}){
 
     return (
         <>
-        <div className="row">
-                <div className="col-lg-12 text-center">
-                    <button id="btnnovo" onClick={habilitar} className="btn btn-primary"><i className="fa fa-plus"></i> Nova vaga</button>
-                </div>
-            </div>
         <form onSubmit={submit} className={styles.form}>
-            <div className="row" id="divform" hidden={true}>
+            <div className="row" id="divform" >
                 <div className="col-md-4">
                     <Input type="text" text="Nome da vaga" id="name" name="name" placeholder="Descrição" handleOnChange={handleChange} value={vaga.name ? vaga.name:''} />
                 </div>
@@ -158,13 +128,13 @@ export default function CadastroFormVagas({handledSubmit, vagasData, btntext}){
             <ul className="list-group" id="list-group">
             </ul>
             <br/>
-            <div className="row" id="divbtns" hidden={true}>
+            <div className="row" id="divbtns">
                 <div className="col-md-3 text-center"><br/></div>
                 <div className="col-md-3 text-center">
                     <SubmitButton text={btntext}/>
                 </div>
                 <div className="col-md-3 text-center">
-                <button type="button" id="btncancel" onClick={desabilitar} className="btn btn-warning"><i className="fa fa-cancel"></i> Cancelar</button>
+                <button type="button" id="btncancel" onClick={limpar} className={styles.btncancel}><i className="fa fa-cancel"></i> Cancelar</button>
                 </div>
             </div>
         </form>

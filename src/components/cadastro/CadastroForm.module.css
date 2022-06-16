@@ -2,3 +2,17 @@
     width: 100%;
     padding: 2em 0;
 }
+
+.btncancel{
+    float: right;
+    background-color: rgb(187, 175, 15);
+    color: #fff;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+
+.btncancel:hover{
+    color: rgb(126, 124, 4);
+}
