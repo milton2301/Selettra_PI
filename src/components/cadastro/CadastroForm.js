@@ -53,7 +53,9 @@ export default function CadastroForm({handledSubmit, candidatosData, btntext}){
         .catch((err) => console.log(err))
     },[])
 
-
+    const refreshPage = ()=>{
+        window.location.reload();
+     }
     const submit = (e) => {
         e.preventDefault()
         if( document.getElementById("name").value === ""
@@ -61,8 +63,10 @@ export default function CadastroForm({handledSubmit, candidatosData, btntext}){
        ){
         alert("Por favor preencha todos os campos!")
        }
+       refreshPage()
+       limpar()
         handledSubmit(candidato)
-        limpar()
+
     }
 
     function handleChange(e){

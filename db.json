@@ -14,8 +14,8 @@
         "name": "Solteiro"
       },
       "vagaCandidatada": {
-        "id": "1",
-        "name": "Técnico de TI"
+        "id": "2",
+        "name": "Manutenção"
       },
       "idade": "26",
       "nacionalidade": "Brasileiro",
@@ -29,6 +29,36 @@
       "numero": "325",
       "complemento": "Sobrado",
       "id": 1
+    },
+    {
+      "name": "matheus yudi",
+      "cpf": "123456789",
+      "rg": "3216547987",
+      "sexo": {
+        "id": "1",
+        "name": "Masculino"
+      },
+      "datanascimento": "2022-06-22",
+      "estadoCivil": {
+        "id": "1",
+        "name": "Solteiro"
+      },
+      "idade": "19",
+      "nacionalidade": "Brasileiro",
+      "vagaCandidatada": {
+        "id": "1",
+        "name": "Técnico de Informática"
+      },
+      "telefone": "454445454545",
+      "whatsapp": "4166666565",
+      "email": "snoop@hotmail.com",
+      "cep": "121212",
+      "uf": "pr",
+      "municipio": "sjp",
+      "rua": "Rua Everton Pugim de Abreu",
+      "numero": "40",
+      "complemento": "45",
+      "id": 2
     }
   ],
   "estadocivil": [
@@ -59,7 +89,7 @@
     {
       "name": "Técnico de Informática",
       "descricao": "Instalações, manutenção.",
-      "salario": "4.500",
+      "salario": "4.560",
       "setor": "TI",
       "qtd": "1",
       "id": 1
@@ -70,7 +100,11 @@
       "setor": "Manutenção",
       "salario": "3.800",
       "qtd": "2",
-      "id": 2
+      "id": 2,
+      "teste": {
+        "id": "4",
+        "name": "Lógica"
+      }
     },
     {
       "name": "Auxiliar Contábil",
@@ -78,7 +112,35 @@
       "setor": "Contábilidade",
       "salario": "2.525",
       "qtd": "3",
-      "id": 3
+      "id": 3,
+      "teste": {
+        "id": "2",
+        "name": "Excel"
+      }
+    },
+    {
+      "name": "Técnico de Informática",
+      "descricao": "teste de criação de vaga",
+      "setor": "TI",
+      "salario": "3.800",
+      "qtd": "3",
+      "teste": {
+        "id": "4",
+        "name": "Lógica"
+      },
+      "id": 4
+    },
+    {
+      "name": "procurar",
+      "descricao": "Técnico",
+      "setor": "TI",
+      "salario": "2.800",
+      "qtd": "3",
+      "teste": {
+        "id": "2",
+        "name": "Excel"
+      },
+      "id": 5
     }
   ],
   "testes": [

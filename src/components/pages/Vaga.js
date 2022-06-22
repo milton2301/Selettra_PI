@@ -7,11 +7,13 @@ import { useState, useEffect} from 'react'
 import CadastroFormVagas from '../cadastro/CadastroFormVagas';
 
 export default function Vaga(){
-   const { id} = useParams()
+    const { id} = useParams()
 
-   const [vaga, setVaga] = useState([])
-    const [showVaga, setShowCandidato] = useState(false)
-   useEffect(() => {
+    const [vaga, setVaga] = useState([])
+    const [showVaga, setShowVaga] = useState(false)
+    const [candidato, setCandidatato] = useState([])
+
+    useEffect(() => {
     setTimeout(() => {
         fetch(`http://localhost:5000/vagas/${id}`,{
             method: 'GET',
@@ -22,25 +24,38 @@ export default function Vaga(){
             setVaga(response)
         }).catch((error) => console.log(error))
     }, 500)
-   }, [id])
+    }, [id])
 
-   function toggleCandidatatoForm(){
-        setShowCandidato(!showVaga)
-   }
+    useEffect(() => {
+        setTimeout(() => {
+            fetch(`http://localhost:5000/candidatos`,{
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }).then((response) => response.json()).then((response) =>{
+                setCandidatato(response)
+            }).catch((error) => console.log(error))
+        }, 500)
+        }, [])
 
-   function editPost(vaga){
-    fetch(`http://localhost:5000/vagas/${vaga.id}`,{
-        method: 'PATCH',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(vaga),
-    }).then((response) => response.json()).then((response) =>{
-        setVaga(response)
-        showVaga(!showVaga)
-        alert("Alteração concluida com sucesso!")
-    }).catch((error) => console.log(error))
-   }
+    function toggleCandidatatoForm(){
+        setShowVaga(!showVaga)
+    }
+
+    function editPost(vaga){
+        fetch(`http://localhost:5000/vagas/${vaga.id}`,{
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(vaga),
+        }).then((response) => response.json()).then((response) =>{
+            setVaga(response)
+            showVaga(!showVaga)
+            alert("Alteração concluida com sucesso!")
+        }).catch((error) => console.log(error))
+    }
 
     return (
         <div>
@@ -55,9 +70,14 @@ export default function Vaga(){
                             <div className={styles.candidato_card}>
                             <h4>{vaga.name}</h4>
                             <p><span>Setor: </span> {vaga.setor}</p>
-                            <p><span>Salário: </span> {vaga.salario}</p>
+                            <p><span>Salário: </span> R$ {vaga.salario},00</p>
                             <p><span>Quantidade: </span> {vaga.qtd}</p>
                             <p><span>Descrição: </span> {vaga.descricao}</p>
+                            {vaga.teste ? (
+                                <p><span>Teste: </span> {vaga.teste.name}</p>
+                            ) : (
+                            <p><span>Sem testes para esta vaga</span></p>
+                            )}
                         </div>
                      
                         ) : (
@@ -65,7 +85,32 @@ export default function Vaga(){
                                 <CadastroFormVagas handledSubmit={editPost} btntext="Salvar edição" vagasData={vaga}/>
                             </div>
                         )}
-                    
+
+                        <br/>
+                        <h1>Candidatos a vaga</h1>
+                        <table className="table table-sm">
+                        <thead>
+                            <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Sexo</th>
+                            <th scope="col">Idade</th>
+                            <th scope="col">Enviar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {candidato.length > 0 && candidato.map((can)=>(
+                                <tr key={can.id}>
+                                    <th scope="row">{can.id}</th>
+                                    <td>{can.name}</td>
+                                    <td>{can.sexo.name}</td>
+                                    <td>{can.idade}</td>
+                                    <td><button type="button"><i className="fa fa-envelope"></i></button></td>
+                                </tr>
+                            ))}
+                        </tbody>
+                        </table>
+        
                 </Container>
             </div>
         ) : (
