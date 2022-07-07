@@ -7,7 +7,6 @@ export default function Candidatos(){
     const [removeLoading, setRemoveLoading] = useState(false)
 
     useEffect(() => {
-        setTimeout(()=>{
             fetch('http://localhost:5000/candidatos', {
                 method: 'GET',
                 headers: {
@@ -20,8 +19,7 @@ export default function Candidatos(){
                 setRemoveLoading(true)
             })
             .catch((err) => console.log(err))
-        }, 300)
-    },[])
+  },[])
 
     function removeCandidatos(id){
         fetch(`http://localhost:5000/candidatos/${id}`,{

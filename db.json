@@ -1,64 +1,25 @@
 {
   "candidatos": [
     {
-      "sexo": {
-        "id": "1",
-        "name": "Masculino"
-      },
       "name": "Amilton",
-      "cpf": "1222355222",
-      "rg": "25656558588",
-      "datanascimento": "1995-01-23",
-      "estadoCivil": {
-        "id": "1",
-        "name": "Solteiro"
-      },
-      "vagaCandidatada": {
-        "id": "2",
-        "name": "Manutenção"
-      },
-      "idade": "26",
-      "nacionalidade": "Brasileiro",
-      "telefone": "41 9 9582-7310",
-      "whatsapp": "41 9 9582-7310",
-      "email": "amiltongomes2301@gmail.com",
-      "cep": "83090-420",
-      "uf": "PR",
-      "municipio": "São José dos Pinhais",
-      "rua": "Antonio Downbroski",
-      "numero": "325",
-      "complemento": "Sobrado",
-      "id": 1
-    },
-    {
-      "name": "matheus yudi",
-      "cpf": "123456789",
-      "rg": "3216547987",
+      "cpf": "25555555",
+      "rg": "5225555",
       "sexo": {
         "id": "1",
         "name": "Masculino"
       },
-      "datanascimento": "2022-06-22",
+      "datanascimento": "2022-06-09",
       "estadoCivil": {
         "id": "1",
         "name": "Solteiro"
       },
-      "idade": "19",
+      "idade": "25",
       "nacionalidade": "Brasileiro",
       "vagaCandidatada": {
         "id": "1",
-        "name": "Técnico de Informática"
+        "name": "Técnico de TI"
       },
-      "telefone": "454445454545",
-      "whatsapp": "4166666565",
-      "email": "snoop@hotmail.com",
-      "cep": "121212",
-      "uf": "pr",
-      "municipio": "sjp",
-      "rua": "Rua Everton Pugim de Abreu",
-      "numero": "40",
-      "complemento": "45",
-      "id": 2
+      "id": 1
     }
   ],
   "estadocivil": [
@@ -87,60 +48,16 @@
   ],
   "vagas": [
     {
-      "name": "Técnico de Informática",
-      "descricao": "Instalações, manutenção.",
-      "salario": "4.560",
-      "setor": "TI",
-      "qtd": "1",
-      "id": 1
-    },
-    {
-      "name": "Manutenção",
-      "descricao": "Manutenção de equipamentos",
-      "setor": "Manutenção",
-      "salario": "3.800",
-      "qtd": "2",
-      "id": 2,
-      "teste": {
-        "id": "4",
-        "name": "Lógica"
-      }
-    },
-    {
-      "name": "Auxiliar Contábil",
-      "descricao": "Contabilidade da empresa",
-      "setor": "Contábilidade",
-      "salario": "2.525",
-      "qtd": "3",
-      "id": 3,
-      "teste": {
-        "id": "2",
-        "name": "Excel"
-      }
-    },
-    {
-      "name": "Técnico de Informática",
-      "descricao": "teste de criação de vaga",
-      "setor": "TI",
-      "salario": "3.800",
-      "qtd": "3",
-      "teste": {
-        "id": "4",
-        "name": "Lógica"
-      },
-      "id": 4
-    },
-    {
-      "name": "procurar",
-      "descricao": "Técnico",
+      "name": "Técnico de TI",
+      "descricao": "Te´cnico de ti",
       "setor": "TI",
       "salario": "2.800",
-      "qtd": "3",
+      "qtd": "2",
       "teste": {
-        "id": "2",
-        "name": "Excel"
+        "id": "3",
+        "name": "Programação"
       },
-      "id": 5
+      "id": 1
     }
   ],
   "testes": [

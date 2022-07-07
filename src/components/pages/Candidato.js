@@ -21,7 +21,7 @@ export default function Candidato(){
         }).then((response) => response.json()).then((response) =>{
             setCandidatato(response)
         }).catch((error) => console.log(error))
-    }, 500)
+    }, 50)
    }, [id])
 
    function toggleCandidatatoForm(){
